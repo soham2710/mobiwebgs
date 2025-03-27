@@ -5,7 +5,12 @@ import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 import { ThemeProvider } from '@/components/theme-provider';
 
-const inter = Inter({ subsets: ['latin'] });
+// Use Inter font with tech-focused subset
+const inter = Inter({ 
+  subsets: ['latin'],
+  display: 'swap',
+  variable: '--font-inter',
+});
 
 export const metadata: Metadata = {
   title: 'MobiWebGS - App Development, Blockchain, AI/ML Solutions',
@@ -18,12 +23,23 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" suppressHydrationWarning>
-      <body className={inter.className}>
-        <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
-          <Navbar />
-          <main>{children}</main>
-          <Footer />
+    <html lang="en" suppressHydrationWarning className={inter.className}>
+      <body className="bg-gradient-dark min-h-screen tech-grid">
+        <ThemeProvider 
+          attribute="class" 
+          defaultTheme="dark" 
+          enableSystem
+        >
+          <div className="relative z-10">
+            <Navbar />
+            <main>{children}</main>
+            <Footer />
+          </div>
+          
+          {/* Technology grid overlay for subtle tech feel */}
+          <div className="fixed inset-0 pointer-events-none z-0">
+            <div className="absolute inset-0 bg-gradient-dark"></div>
+          </div>
         </ThemeProvider>
       </body>
     </html>
