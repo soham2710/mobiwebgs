@@ -276,7 +276,7 @@ export default function Home() {
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 className="text-center"
               >
-                <div className="text-4xl font-bold mb-2 text-secondary">{achievement.number}</div>
+                <div className="text-4xl font-bold mb-2 text-white">{achievement.number}</div>
                 <div className="text-primary-foreground/90">{achievement.label}</div>
               </motion.div>
             ))}
@@ -400,7 +400,7 @@ export default function Home() {
             {[
               "https://images.unsplash.com/photo-1633356122544-f134324a6cee?auto=format&fit=crop&w=300",
               "https://images.unsplash.com/photo-1649180556628-9ba704115795?auto=format&fit=crop&w=300",
-              "https://images.unsplash.com/photo-1664022617645-cf71791942b9?auto=format&fit=crop&w=300",
+              "https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=2015&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
               "https://images.unsplash.com/photo-1669023414162-8b0573b9c6b2?auto=format&fit=crop&w=300"
             ].map((image, index) => (
               <motion.div
